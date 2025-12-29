@@ -107,15 +107,15 @@ export function ThemeToggle() {
             </button>
 
             {isOpen && (
-                <div className="absolute right-0 mt-2 w-36 rounded-lg shadow-lg bg-card border border-border overflow-hidden z-50 animate-in fade-in zoom-in-95 duration-200">
+                <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-36 rounded-lg shadow-lg bg-card border border-border overflow-hidden z-50 animate-in fade-in zoom-in-95 duration-200">
                     <div className="p-1 space-y-1">
                         {themes.map((t) => (
                             <button
                                 key={t.id}
                                 onClick={() => handleThemeChange(t.id)}
                                 className={`w-full flex items-center gap-2 px-3 py-2 text-sm rounded-md transition-colors ${theme === t.id
-                                        ? 'bg-primary/10 text-primary font-medium'
-                                        : 'text-foreground/80 hover:bg-muted hover:text-foreground'
+                                    ? 'bg-primary/10 text-primary font-medium'
+                                    : 'text-foreground/80 hover:bg-muted hover:text-foreground'
                                     }`}
                             >
                                 <span className={theme === t.id ? 'text-primary' : 'text-muted-foreground'}>

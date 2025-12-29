@@ -28,13 +28,16 @@
         --primary: 210 100% 12%;
         /* #001F3F Navy Blue */
         --primary-foreground: 0 0% 98%;
-        --secondary: 142 70% 85%;
-        /* Light Green */
-        --secondary-foreground: 210 100% 12%;
+        --secondary: 142 70% 40%;
+        /* Readable Emerald Green */
+        --secondary-foreground: 0 0% 98%;
+        /* White text on green */
         --accent: 210 100% 12%;
         --accent-foreground: 0 0% 98%;
-        --muted: 142 30% 96%;
-        --muted-foreground: 215 16% 47%;
+        --muted: 142 30% 95%;
+        /* Keep backgrounds very light */
+        --muted-foreground: 142 30% 35%;
+        /* Readable dark green-grey for muted text */
         --border: 214 32% 91%;
     }
 
@@ -45,12 +48,15 @@
         --card-foreground: 0 0% 98%;
         --primary: 217 91% 70%;
         --primary-foreground: 222 47% 11%;
+        /* Dark text on bright blue is accessible */
         --secondary: 271 76% 63%;
-        --secondary-foreground: 222 47% 11%;
+        --secondary-foreground: 0 0% 100%;
+        /* White text on purple */
         --accent: 173 80% 50%;
         --accent-foreground: 222 47% 11%;
         --muted: 217 19% 27%;
-        --muted-foreground: 215 20% 65%;
+        --muted-foreground: 215 20% 75%;
+        /* Lighter grey for better contrast */
         --border: 217 19% 27%;
     }
 
