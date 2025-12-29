@@ -38,10 +38,10 @@ export function Header() {
                             href={item.href}
                             aria-current={pathname === item.href ? 'page' : undefined}
                             className={cn(
-                                "text-sm font-medium transition-colors",
+                                "text-sm font-medium transition-colors px-4 py-2 rounded-full",
                                 pathname === item.href
-                                    ? "text-primary font-bold"
-                                    : "text-foreground/80 hover:text-primary"
+                                    ? "bg-secondary text-secondary-foreground font-bold"
+                                    : "text-foreground/80 hover:text-primary hover:bg-secondary/50"
                             )}
                         >
                             {item.label}

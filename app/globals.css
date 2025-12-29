@@ -20,6 +20,24 @@
         --radius: 0.5rem;
     }
 
+    .navy-green {
+        --background: 0 0% 98%;
+        --foreground: 210 40% 15%;
+        --card: 0 0% 100%;
+        --card-foreground: 210 40% 15%;
+        --primary: 210 100% 12%;
+        /* #001F3F Navy Blue */
+        --primary-foreground: 0 0% 98%;
+        --secondary: 142 70% 85%;
+        /* Light Green */
+        --secondary-foreground: 210 100% 12%;
+        --accent: 210 100% 12%;
+        --accent-foreground: 0 0% 98%;
+        --muted: 142 30% 96%;
+        --muted-foreground: 215 16% 47%;
+        --border: 214 32% 91%;
+    }
+
     .dark {
         --background: 222 47% 11%;
         --foreground: 0 0% 98%;

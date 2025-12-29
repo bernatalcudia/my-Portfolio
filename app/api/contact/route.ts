@@ -9,30 +9,53 @@ export async function POST(request: NextRequest) {
         // Validate request body
         const validatedData = contactSchema.parse(body);
 
-        // Here you would integrate with an email service like Resend, SendGrid, etc.
-        // For now, we'll just log the data and return success
-        console.log('Contact form submission:', {
-            name: validatedData.name,
-            email: validatedData.email,
-            message: validatedData.message,
-            timestamp: new Date().toISOString()
-        });
+        console.log('📨 Contact form submission received:', validatedData);
 
-        // Simulate email sending delay
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        // Check if environment variables are configured for real email sending
+        if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+            // Import dynamically to avoid build errors if package is missing, 
+            // though user should install it: npm install nodemailer
+            // For now we assume standard module availability or standard simulation
+            const nodemailer = require('nodemailer');
 
-        // In production, you would send an email here:
-        // await sendEmail({
-        //   to: 'bernatalcudia@gmail.com',
-        //   from: validatedData.email,
-        //   subject: `Nuevo mensaje de ${validatedData.name}`,
-        //   text: validatedData.message
-        // });
+            const transporter = nodemailer.createTransport({
+                service: 'gmail', // Or use strict host/port if provided
+                auth: {
+                    user: process.env.EMAIL_USER,
+                    pass: process.env.EMAIL_PASS,
+                },
+            });
+
+            await transporter.sendMail({
+                from: process.env.EMAIL_USER,
+                to: process.env.EMAIL_USER, // Send to yourself
+                replyTo: validatedData.email, // Allow simple reply to the visitor
+                subject: `Portfolio Contact: ${validatedData.name}`,
+                text: `Name: ${validatedData.name}\nEmail: ${validatedData.email}\nMessage: ${validatedData.message}`,
+                html: `
+                    <h3>New Contact Message</h3>
+                    <p><strong>Name:</strong> ${validatedData.name}</p>
+                    <p><strong>Email:</strong> ${validatedData.email}</p>
+                    <p><strong>Message:</strong></p>
+                    <div style="background-color: #f4f4f4; padding: 15px; border-radius: 5px;">
+                        ${validatedData.message.replace(/\n/g, '<br>')}
+                    </div>
+                `,
+            });
+            console.log('✅ Email sent successfully via Nodemailer');
+        } else {
+            // Simulation Mode
+            console.log('⚠️ No EMAIL_USER/EMAIL_PASS configured. Skipping actual email send.');
+            console.log('To enable real emails, add EMAIL_USER and EMAIL_PASS to your .env file.');
+
+            // Simulate network delay
+            await new Promise(resolve => setTimeout(resolve, 1000));
+        }
 
         return NextResponse.json(
             {
                 success: true,
-                message: 'Mensaje recibido correctamente'
+                message: 'Mensaje enviado correctamente'
             },
             { status: 200 }
         );
