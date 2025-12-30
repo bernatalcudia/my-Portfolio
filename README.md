@@ -62,13 +62,6 @@ myPortfolio/
 └── public/               # Activos estáticos (CVs en PDF, imágenes)
 ```
 
-## 🌐 Despliegue en Vercel
-
-Este proyecto está preparado para ser desplegado en Vercel con un solo clic. Solo asegúrate de configurar las siguientes variables de entorno en el panel de Vercel:
-
-- `EMAIL_USER`: Tu dirección de correo (Gmail).
-- `EMAIL_PASS`: Tu contraseña de aplicación de Google.
-
 ## 📝 Licencia
 
 © 2025 Bernat Alcudia. Todos los derechos reservados.
