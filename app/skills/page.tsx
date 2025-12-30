@@ -33,7 +33,7 @@ export default function SkillsPage() {
                                 </h3>
                             </div>
                             <div className="flex flex-wrap gap-2">
-                                {category.solid.map((skill) => (
+                                {category.solid.map((skill: string) => (
                                     <Badge key={skill} variant="solid" className="text-base">
                                         {skill}
                                     </Badge>
@@ -50,7 +50,7 @@ export default function SkillsPage() {
                                     </h3>
                                 </div>
                                 <div className="flex flex-wrap gap-2">
-                                    {category.learning.map((skill) => (
+                                    {category.learning.map((skill: string) => (
                                         <Badge key={skill} variant="learning" className="text-base">
                                             {skill}
                                         </Badge>

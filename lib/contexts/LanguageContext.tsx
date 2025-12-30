@@ -24,11 +24,14 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         const initialLanguage = savedLanguage || browserLanguage;
 
         // Only update if different from default to avoid unnecessary re-renders
-        if (initialLanguage !== language) {
-            setLanguageState(initialLanguage);
-            document.documentElement.lang = initialLanguage;
-        }
-    }, []);
+        setLanguageState((current) => {
+            if (initialLanguage !== current) {
+                document.documentElement.lang = initialLanguage;
+                return initialLanguage;
+            }
+            return current;
+        });
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     const setLanguage = (lang: Language) => {
         setLanguageState(lang);
