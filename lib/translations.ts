@@ -18,6 +18,7 @@ export const translations = {
             description: 'Apasionado por crear experiencias web excepcionales.',
             contactButton: 'Contáctame',
             projectsButton: 'Ver Proyectos',
+            downloadCV: 'Descargar CV',
         },
         // About Section
         about: {
@@ -90,6 +91,7 @@ export const translations = {
                 myStrengths: 'Mis Fortalezas',
                 experience: 'Experiencia',
                 education: 'Formación Académica',
+                downloadCV: 'Descargar CV',
             },
             skills: {
                 title: 'Habilidades Técnicas',
@@ -130,6 +132,7 @@ export const translations = {
             description: 'Passionate about creating exceptional web experiences.',
             contactButton: 'Contact Me',
             projectsButton: 'View Projects',
+            downloadCV: 'Download CV',
         },
         // About Section
         about: {
@@ -202,6 +205,7 @@ export const translations = {
                 myStrengths: 'My Strengths',
                 experience: 'Experience',
                 education: 'Education',
+                downloadCV: 'Download CV',
             },
             skills: {
                 title: 'Technical Skills',
