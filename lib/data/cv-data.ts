@@ -5,7 +5,7 @@ export const personalInfo: PersonalInfo = {
     title: "Full Stack Developer",
     email: "bernatalcudia@gmail.com",
     phone: "673739520",
-    linkedin: "https://linkedin.com/in/bernat-alcudia",
+    linkedin: "https://www.linkedin.com/in/bernatalcudiagrimaldos/",
     github: "https://github.com/bernatalcudia",
     languages: ["Español", "Valenciano", "Inglés"]
 };
