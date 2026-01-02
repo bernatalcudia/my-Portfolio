@@ -120,7 +120,7 @@ export function Header() {
                         animate={{ opacity: 1, y: 0, height: 'auto' }}
                         exit={{ opacity: 0, y: -10, height: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="absolute top-full left-0 w-full z-40 md:hidden overflow-hidden bg-background/98 backdrop-blur-xl border-b border-border/40 shadow-xl"
+                        className="absolute top-full left-0 w-full z-40 md:hidden overflow-hidden bg-background border-b border-border/40 shadow-2xl"
                     >
                         <div className="container-custom py-8 flex flex-col space-y-6">
                             <div className="flex flex-col space-y-4">
