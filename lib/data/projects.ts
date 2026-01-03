@@ -15,7 +15,8 @@ const projectsEs: Project[] = [
             "Desarrollo de API RESTful con Express.js",
             "Interfaz de usuario responsive con React Native",
             "Trabajo en equipo utilizando metodologías ágiles"
-        ]
+        ],
+        githubUrl: "https://github.com/b00tc4mp/eurofirms-bootcamp-202402/issues/246"
     },
     {
         id: 2,
@@ -29,7 +30,8 @@ const projectsEs: Project[] = [
             "Diseño responsive y moderno con animaciones fluidas",
             "SEO optimizado con metadata dinámica",
             "Formulario de contacto con validación robusta"
-        ]
+        ],
+        githubUrl: "https://github.com/bernatalcudia/my-Portfolio"
     }
 ];
 
@@ -47,7 +49,8 @@ const projectsEn: Project[] = [
             "Development of RESTful API with Express.js",
             "Responsive user interface with React Native",
             "Teamwork using agile methodologies"
-        ]
+        ],
+        githubUrl: "https://github.com/b00tc4mp/eurofirms-bootcamp-202402/issues/246"
     },
     {
         id: 2,
@@ -61,7 +64,8 @@ const projectsEn: Project[] = [
             "Responsive and modern design with smooth animations",
             "Optimized SEO with dynamic metadata",
             "Contact form with robust validation"
-        ]
+        ],
+        githubUrl: "https://github.com/bernatalcudia/my-Portfolio"
     }
 ];
 

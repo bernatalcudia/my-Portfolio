@@ -33,6 +33,7 @@ export interface Project {
     description: string;
     technologies: string[];
     highlights: string[];
+    githubUrl?: string;
 }
 
 export interface Experience {
