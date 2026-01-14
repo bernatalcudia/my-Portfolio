@@ -81,6 +81,12 @@ export function ThemeToggle() {
         setIsOpen(false);
     };
 
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+        if (e.key === 'Escape') {
+            setIsOpen(false);
+        }
+    };
+
     // Prevent hydration mismatch
     if (!mounted) {
         return (
@@ -107,7 +113,10 @@ export function ThemeToggle() {
             </button>
 
             {isOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-36 rounded-lg shadow-lg bg-card border border-border overflow-hidden z-50 animate-in fade-in zoom-in-95 duration-200">
+                <div
+                    className="absolute left-1/2 -translate-x-1/2 mt-2 w-36 rounded-lg shadow-lg bg-card border border-border overflow-hidden z-50 animate-in fade-in zoom-in-95 duration-200"
+                    onKeyDown={handleKeyDown}
+                >
                     <div className="p-1 space-y-1">
                         {themes.map((t) => (
                             <button
