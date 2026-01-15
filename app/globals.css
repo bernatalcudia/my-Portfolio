@@ -144,4 +144,27 @@
     .text-balance {
         text-wrap: balance;
     }
+
+    /* Print styles for better document printing */
+    @media print {
+        .no-print {
+            display: none !important;
+        }
+
+        body {
+            background: white !important;
+            color: black !important;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    /* High contrast mode support */
+    @media (forced-colors: active) {
+        * {
+            forced-color-adjust: auto;
+        }
+    }
 }
