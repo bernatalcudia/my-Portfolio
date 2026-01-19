@@ -8,14 +8,15 @@
         --foreground: 222 47% 11%;
         --card: 0 0% 100%;
         --card-foreground: 222 47% 11%;
-        --primary: 217 91% 60%;
+        --primary: 224 76% 48%;
         --primary-foreground: 0 0% 100%;
-        --secondary: 271 76% 53%;
+        --secondary: 271 76% 45%;
         --secondary-foreground: 0 0% 100%;
         --accent: 173 80% 40%;
         --accent-foreground: 0 0% 100%;
         --muted: 210 40% 96%;
-        --muted-foreground: 215 16% 47%;
+        --muted-foreground: 215 16% 35%;
+        /* Improved contrast for WCAG AA */
         --border: 214 32% 91%;
         --radius: 0.5rem;
     }
@@ -28,7 +29,7 @@
         --primary: 210 100% 12%;
         /* #001F3F Navy Blue */
         --primary-foreground: 0 0% 98%;
-        --secondary: 142 70% 40%;
+        --secondary: 142 71% 29%;
         /* Readable Emerald Green */
         --secondary-foreground: 0 0% 98%;
         /* White text on green */
@@ -50,13 +51,13 @@
         --primary-foreground: 222 47% 11%;
         /* Dark text on bright blue is accessible */
         --secondary: 271 76% 63%;
-        --secondary-foreground: 0 0% 100%;
+        --secondary-foreground: 222 47% 11%;
         /* White text on purple */
         --accent: 173 80% 50%;
         --accent-foreground: 222 47% 11%;
         --muted: 217 19% 27%;
-        --muted-foreground: 215 20% 75%;
-        /* Lighter grey for better contrast */
+        --muted-foreground: 215 20% 82%;
+        /* Improved contrast for WCAG AA */
         --border: 217 19% 27%;
     }
 

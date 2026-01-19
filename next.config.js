@@ -2,6 +2,11 @@
 const nextConfig = {
     reactStrictMode: true,
     compress: true,
+    poweredByHeader: false,
+    swcMinify: true,
+    experimental: {
+        optimizePackageImports: ['framer-motion', 'lucide-react', 'react-icons'],
+    },
     images: {
         formats: ['image/avif', 'image/webp'],
     },
