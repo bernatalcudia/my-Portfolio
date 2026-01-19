@@ -4,9 +4,17 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import { personalInfo } from '@/lib/data/cv-data';
-import { ThemeToggle } from '@/components/ThemeToggle';
-import { LanguageToggle } from '@/components/LanguageToggle';
+
+const ThemeToggle = dynamic(() => import('@/components/ThemeToggle').then(mod => mod.ThemeToggle), {
+    ssr: false,
+    loading: () => <div className="w-10 h-10 rounded-lg bg-muted animate-pulse" />
+});
+
+const LanguageToggle = dynamic(() => import('@/components/LanguageToggle').then(mod => mod.LanguageToggle), {
+    loading: () => <div className="w-10 h-10 rounded-lg bg-muted animate-pulse" />
+});
 import { useLanguage } from '@/lib/contexts/LanguageContext';
 import { useTranslations } from '@/lib/translations';
 import { cn } from '@/lib/utils';

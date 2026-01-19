@@ -3,9 +3,10 @@
     "version": "0.1.0",
     "private": true,
     "browserslist": [
-        "defaults",
-        "not IE 11",
-        "not dead"
+        "last 2 versions",
+        "not < 0.25%",
+        "not dead",
+        "supports es6-module"
     ],
     "scripts": {
         "dev": "next dev",
