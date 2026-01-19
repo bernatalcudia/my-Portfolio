@@ -70,7 +70,7 @@ export function Header() {
                     ))}
                 </div>
 
-                <div className="flex items-center space-x-2 md:space-x-4">
+                <div className="flex items-center space-x-2 md:space-x-4 min-w-[88px] justify-end">
                     <LanguageToggle />
                     <ThemeToggle />
 
@@ -136,6 +136,7 @@ export function Header() {
                                     >
                                         <Link
                                             href={item.href}
+                                            aria-current={pathname === item.href ? 'page' : undefined}
                                             className={cn(
                                                 "text-xl font-bold py-2 block transition-colors",
                                                 pathname === item.href

@@ -13,11 +13,11 @@ export function Hero() {
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
             {/* Gradient Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10" aria-hidden="true" />
 
             {/* Animated Circles */}
-            <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse delay-1000" />
+            <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" aria-hidden="true" />
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse delay-1000" aria-hidden="true" />
 
             <div className="container-custom relative z-10">
                 <div className="max-w-4xl mx-auto text-center space-y-8 animate-slide-up">
